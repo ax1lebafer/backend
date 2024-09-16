@@ -44,7 +44,7 @@ const deleteUser = (req, res) => {
   const { id } = req.params;
   return User.findByIdAndDelete(id)
     .then(() => {
-      res.status(204).send("Success deleted user");
+      res.status(200).send("Success deleted user");
     })
     .catch((error) => res.status(500).send(error.message));
 };
